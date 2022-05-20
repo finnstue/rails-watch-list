@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-8">
+      </p><h1>Lists</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>List_ID</th>
+            <th>Name</th>
+            <th>Show</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @lists.each do |list| %>
+            <tr>
+              <td><%= list.id %></td>
+              <td><%= list.name %></td>
+              <td><%= link_to 'Show', list %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <div class="mt-4 btn btn-primary">
+        <%= link_to 'New List', new_list_path %>
+      </div>
+    </div>
+  </div>
+</div>

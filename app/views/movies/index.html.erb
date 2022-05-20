@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-8">
+      </p><h1>Movies</h1>
+      <table style="width:100%">
+        <thead>
+          <tr>
+            <th style="width:20%">Title</th>
+            <th>Overview</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @movies.each do |movie| %>
+            <tr>
+              <td style="padding: 8px"><%= movie.title %></td>
+              <td style="padding: 8px"><%= movie.overview %></td>
+              <td style="padding: 8px"><%= link_to 'Show', movie %></td>
+              <td style="padding: 8px"><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

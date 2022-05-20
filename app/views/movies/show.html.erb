@@ -1,0 +1,21 @@
+<div class="banner mt-4">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-4">
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= @movie.poster_url %>')">
+          <%= @movie.title %>
+        </div>
+        <div class="mt-4">
+          <div>
+            <%= @movie.overview %>
+          </div>
+        </div>
+        <div class="mt-4">
+          <div>
+            <p>Rating: <%= @movie.rating %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
